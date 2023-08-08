@@ -22,8 +22,8 @@ app.listen(PORT, () => {
     console.log(`API listening on PORT ${PORT} `)
 })
 
-app.get('/', (req, res) => {
-    res.send('Hey this is my API running 🥳')
+app.get('/check', (req, res) => {
+    res.status(200).json({ check: false })
 })
 
 app.get('/about', (req, res) => {
